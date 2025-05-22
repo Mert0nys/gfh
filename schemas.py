@@ -6,6 +6,7 @@ from pydantic_settings import BaseSettings
 class User(BaseModel):
     id: int
     email: EmailStr
+    
 
 class UserCreate(BaseModel):
     email: EmailStr
@@ -50,7 +51,5 @@ class Settings(BaseSettings):
     SECRET_KEY: str
     ALGORITHM: str
 
-    class Config:
-        env_file = ".env"
 
     

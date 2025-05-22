@@ -13,6 +13,7 @@ class Book(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
     author = Column(String, nullable=False)
+    description = Column(String, nullable=True)
     publication_year = Column(Integer, nullable=True)
     isbn = Column(String, unique=True, nullable=True)
     available_copies = Column(Integer, nullable=False)
